@@ -17,7 +17,7 @@
 		"format": "prettier -c .",
 		"format:fix": "prettier -w .",
 		"codecheck:fix": "npm run lint:all:fix && npm run test",
-		"prepare": "husky install"
+		"prepare": "cd .. && husky install template/.husky"
 	},
 	"dependencies": {
 		"next": "14.2.3",
@@ -34,6 +34,7 @@
 		"daisyui": "^4.11.1",
 		"eslint": "^8",
 		"eslint-config-next": "14.2.3",
+		"husky": "^8.0.0",
 		"jest": "^29.7.0",
 		"jest-environment-jsdom": "^29.7.0",
 		"lint-staged": "^15.2.5",
@@ -44,5 +45,10 @@
 		"stylelint-config-tailwindcss": "^0.0.7",
 		"tailwindcss": "^3.4.3",
 		"typescript": "^5"
+	},
+	"lint-staged": {
+		"*.{json,md,mdx,css,scss,sass,html,yml,yaml,js,jsx,ts,tsx}": [
+			"npm run codecheck:fix"
+		]
 	}
 }
