@@ -16,7 +16,7 @@
 		"lint:style:fix": "stylelint --fix **/*.css",
 		"format": "prettier -c .",
 		"format:fix": "prettier -w .",
-		"codecheck:fix": "npm run lint:all:fix && npm run test",
+		"codecheck:fix": "npm run test && npm run lint:all:fix",
 		"prepare": "cd .. && husky install template/.husky"
 	},
 	"dependencies": {
