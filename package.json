@@ -1,0 +1,21 @@
+{
+  "name": "frontend-mono",
+  "version": "1.0.0",
+  "description": "This is a mono repo for all frontend projects",
+  "main": "index.js",
+  "scripts": {
+    "codecheck:allproject": "cd ./template && npm run codecheck:fix && cd ../ui-lib && npm run codecheck:fix",
+    "prepare": "husky install"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^8.0.0",
+    "lint-staged": "^15.2.5"
+  },
+  "lint-staged": {
+    "*.{json,md,mdx,css,scss,sass,html,yml,yaml,js,jsx,ts,tsx}": [
+      "npm run codecheck:allproject"
+    ]
+  }
+}

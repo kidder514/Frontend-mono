@@ -1,0 +1,10 @@
+# Ignore artifacts:
+build
+coverage
+node_modules
+.eslintrc.cjs
+.gitignore
+.prettierignore
+.prettierrc.js
+.storybook
+.stylelintrc.json

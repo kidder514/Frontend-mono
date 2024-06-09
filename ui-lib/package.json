@@ -6,10 +6,18 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "lint:all": "npm run lint:js && npm run lint:style && npm run format",
+    "lint:all:fix": "npm run lint:js:fix && npm run lint:style:fix && npm run format:fix",
+    "lint:js": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:js:fix": "eslint . --fix --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:style": "stylelint **/*.css",
+    "lint:style:fix": "stylelint --fix **/*.css",
+    "codecheck:fix": "npm run lint:all:fix",
+    "format": "prettier -c .",
+    "format:fix": "prettier -w ."
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -30,11 +38,17 @@
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
     "@vitejs/plugin-react": "^4.2.1",
+    "daisyui": "^4.12.2",
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
     "eslint-plugin-storybook": "^0.8.0",
+    "prettier": "^3.3.1",
     "storybook": "^8.1.5",
+    "stylelint": "^16.6.1",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-config-tailwindcss": "^0.0.7",
+    "tailwindcss": "^3.4.4",
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
   }
