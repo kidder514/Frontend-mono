@@ -21,42 +21,40 @@ import AvatarDropdown from '@ui-lib/nav/AvatarDropdown';
 import SideMenu from '@ui-lib/nav/SideMenu';
 import FlexRow from '@ui-lib/layout/FlexRow';
 import { ThemeSwitcher } from '@component/common/themeSwitcher/ThemeSwitcher';
+import Link from 'next/link';
 
-export default function page() {
+export default function page({ children }: { children: React.ReactNode }) {
 	return (
 		<>
-			<PaddingContainer classNames="h-screen bg-base-200">
+			<PaddingContainer classNames="h-full bg-base-200">
 				<FlexRow>
 					<SideMenu
 						logoDark="https://nexus.daisyui.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-dark.cce044d8.png&w=96&q=75"
 						logoLight="https://nexus.daisyui.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-light.ea00a81c.png&w=96&q=75"
 						menuList={[
 							{
-								label: (
-									<>
+								link: (
+									<Link href="/dashboard">
 										<HiOutlineHome size={20} />
 										Dashboard
-									</>
+									</Link>
 								),
-								link: '#',
 							},
 							{
-								label: (
-									<>
+								link: (
+									<Link href="/currency">
 										<HiOutlineCurrencyDollar size={20} />
-										Currencies
-									</>
+										Currency
+									</Link>
 								),
-								link: '#',
 							},
 							{
-								label: (
-									<>
+								link: (
+									<Link href="/Instrument">
 										<HiOutlineListBullet size={20} />
 										Instrument
-									</>
+									</Link>
 								),
-								link: '#',
 							},
 							{
 								label: (
@@ -65,54 +63,48 @@ export default function page() {
 										Report
 									</>
 								),
-								link: '#',
 								childrenList: [
 									{
-										label: (
-											<>
+										link: (
+											<Link href="/report/user-report">
 												<HiOutlineUser size={20} />
 												User Report
-											</>
+											</Link>
 										),
-										link: '#',
 									},
 									{
-										label: (
-											<>
+										link: (
+											<Link href="/report/financial-report">
 												<HiOutlinePresentationChartLine size={20} />
 												Financial Report
-											</>
+											</Link>
 										),
-										link: '#',
 									},
 									{
-										label: (
-											<>
+										link: (
+											<Link href="/report/activity-report">
 												<HiOutlinePhone size={20} />
 												Activity Report
-											</>
+											</Link>
 										),
-										link: '#',
 									},
 									{
-										label: (
-											<>
+										link: (
+											<Link href="/report/insight-report">
 												<HiOutlineLightBulb size={20} />
 												Insight Report
-											</>
+											</Link>
 										),
-										link: '#',
 									},
 								],
 							},
 							{
-								label: (
-									<>
+								link: (
+									<Link href="/logout">
 										<HiOutlineArrowRightStartOnRectangle size={20} />
 										Logout
-									</>
+									</Link>
 								),
-								link: '#',
 							},
 						]}
 					/>
@@ -139,7 +131,7 @@ export default function page() {
 								</>
 							}
 						/>
-						<div>content</div>
+						<>{children}</>
 					</PaddingContainer>
 				</FlexRow>
 			</PaddingContainer>

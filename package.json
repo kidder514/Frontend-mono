@@ -4,7 +4,7 @@
   "description": "This is a mono repo for all frontend projects",
   "main": "index.js",
   "scripts": {
-    "codecheck:allproject": "cd ./template && npm run codecheck:fix && cd ../ui-lib && npm run codecheck:fix",
+    "codecheck:all": "cd ./template && npm run codecheck:fix && cd ../ui-lib && npm run codecheck:fix",
     "prepare": "husky install"
   },
   "author": "",
@@ -15,7 +15,7 @@
   },
   "lint-staged": {
     "*.{json,md,mdx,css,scss,sass,html,yml,yaml,js,jsx,ts,tsx}": [
-      "npm run codecheck:allproject"
+      "npm run codecheck:all"
     ]
   }
 }

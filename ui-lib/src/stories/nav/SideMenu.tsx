@@ -1,8 +1,8 @@
 import FlexColumn from '../layout/FlexColumn';
 
 interface MenuItem {
-	label: React.ReactNode | string;
-	link?: string;
+	label?: React.ReactNode;
+	link?: React.ReactNode; // the <Link /> element from nextjs
 	childrenList?: MenuItem[];
 }
 
@@ -11,8 +11,6 @@ interface SideMenuProps {
 	logoDark?: string;
 	menuList: MenuItem[];
 }
-
-// next todo, replace mock menu with real data from props
 
 const SideMenu = ({ logoDark, logoLight, menuList }: SideMenuProps) => (
 	<FlexColumn classNames={'shadow-sm bg-base-100 rounded-lg w-[240px]'}>
@@ -32,17 +30,13 @@ const renderMenu = (menu: MenuItem[], classNames = ''): React.ReactNode => {
 			return (
 				<li className={className}>
 					<details>
-						<summary>{item.label}</summary>
+						<summary>{item.label && item.label}</summary>
 						<ul>{renderMenu(item.childrenList, className)}</ul>
 					</details>
 				</li>
 			);
 		} else {
-			return (
-				<li className={className}>
-					<a href={item.link}>{item.label}</a>
-				</li>
-			);
+			return <li className={className}>{item.link && item.link}</li>;
 		}
 	});
 };
