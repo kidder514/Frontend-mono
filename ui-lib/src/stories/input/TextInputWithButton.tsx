@@ -1,5 +1,5 @@
 import React from 'react';
-import IconSearch from '../icon/IconSearch';
+import { HiOutlineMagnifyingGlass } from 'react-icons/hi2';
 import TextInputBase from './TextInputBase';
 import ButtonRound from '../button/ButtonRound';
 
@@ -9,7 +9,7 @@ const TextInputWithButton = React.forwardRef<HTMLInputElement, TextInputWithButt
 	return (
 		<label className="input input-bordered flex items-center gap-2">
 			<TextInputBase {...props} ref={ref} />
-			<ButtonRound label={<IconSearch />} />
+			<ButtonRound label={<HiOutlineMagnifyingGlass size={20} />} />
 		</label>
 	);
 });

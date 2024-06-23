@@ -1,0 +1,13 @@
+import React from 'react';
+import cx from 'classnames';
+
+interface FlexRowProps {
+	children: Readonly<React.ReactNode>;
+	classNames?: string;
+}
+
+const FlexRow = ({ classNames, children }: FlexRowProps) => {
+	return <div className={cx('flex flex-row h-full', classNames)}>{children}</div>;
+};
+
+export default FlexRow;

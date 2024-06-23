@@ -12,8 +12,7 @@ export default function IconSwap({ iconFrom, iconTo, checked, onChange, classNam
 	return (
 		<label className={cx('swap swap-rotate', className)}>
 			<input type="checkbox" checked={checked} onChange={onChange} />
-			{iconFrom}
-			{iconTo}
+			{checked ? iconFrom : iconTo}
 		</label>
 	);
 }

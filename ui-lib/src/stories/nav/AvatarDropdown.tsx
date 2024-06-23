@@ -15,7 +15,7 @@ const AvatarDropdown = ({ imageUrl, linkList }: AvatarDropdownProps) => (
 				<img alt="Tailwind CSS Navbar component" src={imageUrl} />
 			</div>
 		</div>
-		<ul tabIndex={0} className="menu menu-md dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+		<ul tabIndex={0} className="menu menu-md dropdown-content mt-3 z-[1] p-2 bg-base-100 rounded-lg w-52 shadow-sm">
 			{linkList.map((link) => (
 				<li key={link.text}>
 					<a href={link.url}>{link.text}</a>

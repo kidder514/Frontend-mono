@@ -1,6 +1,5 @@
 import IconSwap from '../icon/IconSwap';
-import IconSun from '../icon/IconSun';
-import IconMoon from '../icon/IconMoon';
+import { HiOutlineMoon, HiOutlineSun } from 'react-icons/hi2';
 import cx from 'classnames';
 
 export const THEME_KEY = 'theme';
@@ -19,8 +18,8 @@ const ButtonSwapThemeSwitch = ({ theme = THEME.LIGHT, onChange, className }: But
 	return (
 		<IconSwap
 			className={cx('btn btn-ghost btn-circle', className)}
-			iconFrom={<IconSun />}
-			iconTo={<IconMoon />}
+			iconFrom={<HiOutlineSun size={20} />}
+			iconTo={<HiOutlineMoon size={20} />}
 			checked={theme === THEME.BLACK}
 			onChange={onChange}
 		/>
