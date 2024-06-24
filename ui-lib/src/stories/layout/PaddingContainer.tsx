@@ -1,17 +1,31 @@
-import React from 'react';
 import cx from 'classnames';
+import React from 'react';
 
 interface PaddingContainerProps {
-	left?: boolean;
-	right?: boolean;
-	top?: boolean;
-	bottom?: boolean;
+	size: 'sm' | 'md' | 'lg' | 'xl';
 	children: Readonly<React.ReactNode>;
 	classNames?: string;
 }
 
-const PaddingContainer = ({ left = true, right = true, top = true, bottom = true, classNames, children }: PaddingContainerProps) => {
-	return <div className={cx({ 'pl-4': left }, { 'pr-4': right }, { 'pt-4': top }, { 'pb-4': bottom }, 'flex-1', classNames)}>{children}</div>;
+const PaddingContainer = ({ size, classNames, children }: PaddingContainerProps) => {
+	let computedPaddingClass;
+	switch (size) {
+		case 'sm':
+			computedPaddingClass = 'p-4';
+			break;
+		case 'md':
+			computedPaddingClass = 'p-8';
+			break;
+		case 'lg':
+			computedPaddingClass = 'p-12';
+			break;
+		case 'xl':
+			computedPaddingClass = 'p-16';
+			break;
+		default:
+			break;
+	}
+	return <div className={cx(computedPaddingClass, classNames)}>{children}</div>;
 };
 
 export default PaddingContainer;

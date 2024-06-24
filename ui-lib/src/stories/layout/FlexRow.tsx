@@ -1,5 +1,5 @@
-import React from 'react';
 import cx from 'classnames';
+import React from 'react';
 
 interface FlexRowProps {
 	children: Readonly<React.ReactNode>;

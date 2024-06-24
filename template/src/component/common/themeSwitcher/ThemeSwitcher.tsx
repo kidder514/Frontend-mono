@@ -1,10 +1,10 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { isDarkTheme } from '@util/browser';
 import ButtonSwapThemeSwitch, { THEME, THEME_KEY } from '@ui-lib/button/ButtonSwapThemeSwitch';
+import { isDarkTheme } from '@util/browser';
+import { useEffect, useState } from 'react';
 
-export const ThemeSwitcher = () => {
+const ThemeSwitcher = () => {
 	const [theme, setTheme] = useState<THEME>();
 
 	const handleToggle = () => {
@@ -25,3 +25,5 @@ export const ThemeSwitcher = () => {
 
 	return <ButtonSwapThemeSwitch theme={theme} onChange={handleToggle} />;
 };
+
+export default ThemeSwitcher;

@@ -1,36 +1,37 @@
-import Header from '@ui-lib/header/Header';
-import PaddingContainer from '@ui-lib/layout/PaddingContainer';
+import ThemeSwitcher from '@component/common/themeSwitcher/ThemeSwitcher';
+import { LOGO_DARK, LOGO_LIGHT } from '@root/src/const/constant';
 import ButtonRound from '@ui-lib/button/ButtonRound';
 import ButtonWithIcon from '@ui-lib/button/ButtonWithIcon';
-import {
-	HiOutlineBell,
-	HiOutlineHome,
-	HiOutlineCurrencyDollar,
-	HiOutlineListBullet,
-	HiOutlineDocument,
-	HiOutlineArrowRightStartOnRectangle,
-	HiOutlineUser,
-	HiOutlinePresentationChartLine,
-	HiOutlinePhone,
-	HiOutlineLightBulb,
-	HiOutlineBars4,
-	HiOutlineMagnifyingGlass,
-} from 'react-icons/hi2';
+import Header from '@ui-lib/header/Header';
 import IconWithBadge from '@ui-lib/icon/IconWithBadge';
+import FlexRow from '@ui-lib/layout/FlexRow';
+import PaddingContainer from '@ui-lib/layout/PaddingContainer';
 import AvatarDropdown from '@ui-lib/nav/AvatarDropdown';
 import SideMenu from '@ui-lib/nav/SideMenu';
-import FlexRow from '@ui-lib/layout/FlexRow';
-import { ThemeSwitcher } from '@component/common/themeSwitcher/ThemeSwitcher';
 import Link from 'next/link';
+import {
+	HiOutlineArrowRightStartOnRectangle,
+	HiOutlineBars4,
+	HiOutlineBell,
+	HiOutlineCurrencyDollar,
+	HiOutlineDocument,
+	HiOutlineHome,
+	HiOutlineLightBulb,
+	HiOutlineListBullet,
+	HiOutlineMagnifyingGlass,
+	HiOutlinePhone,
+	HiOutlinePresentationChartLine,
+	HiOutlineUser,
+} from 'react-icons/hi2';
 
 export default function page({ children }: { children: React.ReactNode }) {
 	return (
 		<>
-			<PaddingContainer classNames="h-full bg-base-200">
+			<PaddingContainer classNames="h-full bg-base-200" size="sm">
 				<FlexRow>
 					<SideMenu
-						logoDark="https://nexus.daisyui.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-dark.cce044d8.png&w=96&q=75"
-						logoLight="https://nexus.daisyui.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-light.ea00a81c.png&w=96&q=75"
+						logoDark={LOGO_DARK}
+						logoLight={LOGO_LIGHT}
 						menuList={[
 							{
 								link: (
@@ -108,7 +109,7 @@ export default function page({ children }: { children: React.ReactNode }) {
 							},
 						]}
 					/>
-					<PaddingContainer top={false}>
+					<PaddingContainer size="sm" classNames="flex-1 pt-0 pr-0">
 						<Header
 							leftNode={
 								<>

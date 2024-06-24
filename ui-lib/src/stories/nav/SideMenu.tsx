@@ -15,8 +15,8 @@ interface SideMenuProps {
 const SideMenu = ({ logoDark, logoLight, menuList }: SideMenuProps) => (
 	<FlexColumn classNames={'shadow-sm bg-base-100 rounded-lg w-[240px]'}>
 		<header className="flex h-16 items-center justify-center ">
-			<img alt="logo-light" loading="lazy" width="72" height="20" decoding="async" className="block [[data-theme=black]_&]:hidden" src={logoLight} />
-			<img alt="logo-dark" loading="lazy" width="72" height="20" decoding="async" className="hidden [[data-theme=black]_&]:block" src={logoDark} />
+			<img alt="logo-light" loading="lazy" width="100" height="20" decoding="async" className="block [[data-theme=black]_&]:hidden" src={logoLight} />
+			<img alt="logo-dark" loading="lazy" width="100" height="20" decoding="async" className="hidden [[data-theme=black]_&]:block" src={logoDark} />
 		</header>
 		<ul className="menu menu-md w-full flex-1">{renderMenu(menuList)}</ul>
 		<span className="h-8 text-center text-xs">Version 1.0.0</span>

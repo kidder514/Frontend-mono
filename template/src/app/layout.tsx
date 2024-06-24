@@ -1,6 +1,7 @@
+import ThemePreset from '@component/common/themeSwitcher/ThemePreset';
+import cx from 'classnames';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import cx from 'classnames';
 
 import '@style/globals.css';
 
@@ -19,6 +20,7 @@ export default function RootLayout({
 	return (
 		<html lang="en" className="h-full">
 			<body className={cx(inter.className, 'h-full')}>{children}</body>
+			<ThemePreset />
 		</html>
 	);
 }

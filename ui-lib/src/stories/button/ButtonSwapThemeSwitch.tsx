@@ -1,6 +1,6 @@
-import IconSwap from '../icon/IconSwap';
-import { HiOutlineMoon, HiOutlineSun } from 'react-icons/hi2';
 import cx from 'classnames';
+import { HiOutlineMoon, HiOutlineSun } from 'react-icons/hi2';
+import IconSwap from '../icon/IconSwap';
 
 export const THEME_KEY = 'theme';
 export enum THEME {
