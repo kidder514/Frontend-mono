@@ -8,7 +8,7 @@ import Link from 'next/link';
 export default function page({ children }: { children: React.ReactNode }) {
 	return (
 		<>
-			<PaddingContainer classNames="h-full bg-base-200" size="sm">
+			<PaddingContainer classNames="h-full" size="sm">
 				<FlexRow>
 					<SideMenu
 						logoDark={LOGO_DARK}

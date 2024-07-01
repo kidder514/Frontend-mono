@@ -6,9 +6,9 @@ import Image from 'next/image';
 
 export default function page({ children }: { children: React.ReactNode }) {
 	return (
-		<div className="h-full bg-base-200">
+		<div className="h-full">
 			<CenteredContainer>
-				<PaddingContainer size="xl" classNames="bg-base-100 shadow-sm rounded-lg">
+				<PaddingContainer size="xl" classNames="shadow-sm rounded-lg">
 					<FlexColumn>
 						<header className="flex flex-col justify-center items-center">
 							<Image alt="logo-light" loading="lazy" width="90" height="20" decoding="async" className="block" src={LOGO_LIGHT} />

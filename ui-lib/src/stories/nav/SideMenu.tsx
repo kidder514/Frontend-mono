@@ -13,7 +13,7 @@ interface SideMenuProps {
 }
 
 const SideMenu = ({ logoDark, logoLight, menuList }: SideMenuProps) => (
-	<FlexColumn classNames={'shadow-sm bg-base-100 rounded-lg w-[240px]'}>
+	<FlexColumn classNames={'shadow-sm rounded-lg w-[240px]'}>
 		<header className="flex h-16 items-center justify-center ">
 			<img alt="logo-light" loading="lazy" width="100" height="20" decoding="async" className="block=" src={logoLight} />
 			<img alt="logo-dark" loading="lazy" width="100" height="20" decoding="async" className="hidden=" src={logoDark} />
