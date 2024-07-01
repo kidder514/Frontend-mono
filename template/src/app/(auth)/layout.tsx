@@ -11,24 +11,8 @@ export default function page({ children }: { children: React.ReactNode }) {
 				<PaddingContainer size="xl" classNames="bg-base-100 shadow-sm rounded-lg">
 					<FlexColumn>
 						<header className="flex flex-col justify-center items-center">
-							<Image
-								alt="logo-light"
-								loading="lazy"
-								width="90"
-								height="20"
-								decoding="async"
-								className="block [[data-theme=black]_&]:hidden"
-								src={LOGO_LIGHT}
-							/>
-							<Image
-								alt="logo-dark"
-								loading="lazy"
-								width="90"
-								height="20"
-								decoding="async"
-								className="hidden [[data-theme=black]_&]:block"
-								src={LOGO_DARK}
-							/>
+							<Image alt="logo-light" loading="lazy" width="90" height="20" decoding="async" className="block" src={LOGO_LIGHT} />
+							<Image alt="logo-dark" loading="lazy" width="90" height="20" decoding="async" className="hidden" src={LOGO_DARK} />
 						</header>
 
 						<>{children}</>

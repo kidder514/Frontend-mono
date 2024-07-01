@@ -6,7 +6,8 @@
 	"scripts": {
 		"start": "next dev",
 		"build": "next build",
-		"start:prod": "rm -rf .next && npm run build && npm run serve",
+		"serve:prod": "next start",
+		"start:prod": "rm -rf .next && npm run build && npm run serve:prod",
 		"test": "vitest run",
 		"test:watch": "vitest watch",
 		"lint:all": "npm run lint:js && npm run lint:style && npm run format",
@@ -20,11 +21,16 @@
 		"codecheck:fix": "npm run test && npm run lint:all:fix"
 	},
 	"dependencies": {
+		"@emotion/cache": "^11.11.0",
+		"@emotion/react": "^11.11.4",
+		"@emotion/styled": "^11.11.5",
+		"@mui/icons-material": "^5.15.21",
+		"@mui/material": "^5.15.21",
+		"@mui/material-nextjs": "^5.15.11",
 		"classnames": "^2.5.1",
 		"next": "14.2.3",
 		"react": "^18",
-		"react-dom": "^18",
-		"react-icons": "^5.2.1"
+		"react-dom": "^18"
 	},
 	"devDependencies": {
 		"@testing-library/jest-dom": "^6.4.5",
@@ -35,7 +41,6 @@
 		"@types/react-dom": "^18",
 		"@vitejs/plugin-react": "^4.3.0",
 		"autoprefixer": "^10.4.19",
-		"daisyui": "^4.11.1",
 		"eslint": "^8",
 		"eslint-config-next": "14.2.3",
 		"jest-environment-jsdom": "^29.7.0",

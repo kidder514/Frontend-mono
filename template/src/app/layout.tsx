@@ -1,4 +1,4 @@
-import ThemePreset from '@component/common/themeSwitcher/ThemePreset';
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import cx from 'classnames';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
@@ -19,8 +19,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" className="h-full">
-			<body className={cx(inter.className, 'h-full')}>{children}</body>
-			<ThemePreset />
+			<body className={cx(inter.className, 'h-full')}>
+				<AppRouterCacheProvider>{children}</AppRouterCacheProvider>
+			</body>
 		</html>
 	);
 }
